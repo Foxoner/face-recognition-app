@@ -63,7 +63,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://git.heroku.com/salty-citadel-99129.git/imageurl', {
+      fetch('https://salty-citadel-99129.herokuapp.com/imageurl', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if(response) {
-          fetch('https://git.heroku.com/salty-citadel-99129.git/image', {
+          fetch('https://salty-citadel-99129.herokuapp.com/image', {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
